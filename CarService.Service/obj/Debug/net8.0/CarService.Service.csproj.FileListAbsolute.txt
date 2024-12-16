@@ -1,0 +1,17 @@
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\bin\Debug\net8.0\CarService.Service.deps.json
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\bin\Debug\net8.0\CarService.Service.dll
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\bin\Debug\net8.0\CarService.Service.pdb
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\bin\Debug\net8.0\CarService.Domain.dll
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\bin\Debug\net8.0\CarService.Persistence.dll
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\bin\Debug\net8.0\CarService.Persistence.pdb
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\bin\Debug\net8.0\CarService.Domain.pdb
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0\CarService.Service.csproj.AssemblyReference.cache
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0\CarService.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0\CarService.Service.AssemblyInfoInputs.cache
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0\CarService.Service.AssemblyInfo.cs
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0\CarService.Service.csproj.CoreCompileInputs.cache
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0\CarServi.BB7C75C8.Up2Date
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0\CarService.Service.dll
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0\refint\CarService.Service.dll
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0\CarService.Service.pdb
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0\ref\CarService.Service.dll
