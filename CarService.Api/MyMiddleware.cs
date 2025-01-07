@@ -1,4 +1,5 @@
 ﻿namespace CarService.Api;
+
 using Microsoft.AspNetCore.Http;
 
 public class MyMiddleware
@@ -15,15 +16,16 @@ public class MyMiddleware
 // اول اجرا می‌شود
 
         // WriteAsync() -> using Microsoft.AspNetCore.Http;
-         httpContext.Response.Redirect("/home/index.cshtml");
-            //.WriteAsync(text: "<p>Hello World (1)!</p>");
+        httpContext.Response.Redirect("/home/index.cshtml");
+        //.WriteAsync(text: "<p>Hello World (1)!</p>");
 
-            
+
         await Next(httpContext);
 
         // بعدی اجرا می‌شود Middleware بعد از اجرای شدن
 
         // WriteAsync() -> using Microsoft.AspNetCore.Http;
         await httpContext.Response
-            .WriteAsync(text: "<p>Hello World (3)!</p>");    }
+            .WriteAsync(text: "<p>Hello World (3)!</p>");
+    }
 }

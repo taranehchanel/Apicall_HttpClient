@@ -15,3 +15,4 @@ C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0
 C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0\refint\CarService.Service.dll
 C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0\CarService.Service.pdb
 C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0\ref\CarService.Service.dll
+C:\Users\0080887945\RiderProjects\CarService\CarService.Service\obj\Debug\net8.0\CarService.Service.sourcelink.json

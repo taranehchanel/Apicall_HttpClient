@@ -9,22 +9,22 @@ namespace CarService.Api;
 
 //[Authorize]
 [Route("api/v2/HomePage/Services")]
-public class OmidbnkController(IHttpClientFactory factory)
+public class OmidbnkController(IHttpClientFactory factory) : ControllerBase
 {
     [HttpPost(template: "Register")]
     public async Task Register()
     {
         HttpClient httpClient = new HttpClient();
-        httpClient.BaseAddress = new Uri("https://omidbnk.ir/gateway/identity/");
-        httpClient.DefaultRequestHeaders
-            .Accept
-            .Add(new MediaTypeWithQualityHeaderValue("application/json")); //ACCEPT header  
+        AddDefaultHeader(ref httpClient);
 
-        httpClient.DefaultRequestHeaders.Add("AppId", "1");
-        httpClient.DefaultRequestHeaders.Add("DeviceTypeId", "1");
-        httpClient.DefaultRequestHeaders.Add("DeviceId", "09128014549");
-        httpClient.DefaultRequestHeaders.Add("AppLanguage", "fa");
-        httpClient.DefaultRequestHeaders.Add("DeviceVersion", "1.7");
+        httpClient.BaseAddress = new Uri("https://omidbnk.ir/gateway/identity/");
+        //httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json")); //ACCEPT header  
+        //AddDefaultHeader  :  // کد پایین باشه نیازی به این قسمت نیست دیگه
+        // httpClient.DefaultRequestHeaders.Add("AppId", "1");
+        // httpClient.DefaultRequestHeaders.Add("DeviceTypeId", "1");
+        // httpClient.DefaultRequestHeaders.Add("DeviceId", "09128014549");
+        // httpClient.DefaultRequestHeaders.Add("AppLanguage", "fa");
+        // httpClient.DefaultRequestHeaders.Add("DeviceVersion", "1.7");
 
         HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "v2/Identity/Register");
         request.Content = new StringContent(
@@ -105,21 +105,27 @@ public class OmidbnkController(IHttpClientFactory factory)
     [HttpGet("services2")]
     public async Task<Service> GetServices()
     {
+        var myActionName = ControllerContext.RouteData.Values["action"].ToString();
+        string myControllerName = ControllerContext.RouteData.Values["controller"].ToString();
+        string url = $"{myControllerName}/{myActionName}";
+
+
         var result = new Service();
         //var baseUrl = "https://omidbnk.ir/gateway";
         // string queryString = "?AppId=1&DeviceTypeId=1&DeviceId=09128014549&AppLanguage=fa&DeviceVersion=1.7";
         var httpClient = factory.CreateClient("services_client");
         //httpClient.BaseAddress = new Uri(baseUrl);
         httpClient.DefaultRequestHeaders.Accept.Clear();
-        httpClient.DefaultRequestHeaders.Accept.Add(
-            new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-
-
-        httpClient.DefaultRequestHeaders.Add("AppId", "1");
-        httpClient.DefaultRequestHeaders.Add("DeviceTypeId", "1");
-        httpClient.DefaultRequestHeaders.Add("DeviceId", "09128014549");
-        httpClient.DefaultRequestHeaders.Add("AppLanguage", "fa");
-        httpClient.DefaultRequestHeaders.Add("DeviceVersion", "1.7");
+        AddDefaultHeader(ref httpClient);
+        // httpClient.DefaultRequestHeaders.Accept.Add(
+        //     new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+        //
+        //
+        // httpClient.DefaultRequestHeaders.Add("AppId", "1");
+        // httpClient.DefaultRequestHeaders.Add("DeviceTypeId", "1");
+        // httpClient.DefaultRequestHeaders.Add("DeviceId", "09128014549");
+        // httpClient.DefaultRequestHeaders.Add("AppLanguage", "fa");
+        // httpClient.DefaultRequestHeaders.Add("DeviceVersion", "1.7");
 
         httpClient.DefaultRequestHeaders.Authorization =
             new AuthenticationHeaderValue("Bearer", "89f20427-c10e-4ce5-8c73-26f3a2a4b208");
@@ -129,6 +135,7 @@ public class OmidbnkController(IHttpClientFactory factory)
             string apiResponse = await response.Content.ReadAsStringAsync();
             result = JsonConvert.DeserializeObject<Service>(apiResponse);
         }
+
 
         result = await httpClient.GetFromJsonAsync<Service>("v2/HomePage/Services");
         return result;
@@ -185,8 +192,7 @@ public class OmidbnkController(IHttpClientFactory factory)
             using (var responseMessage = await httpClient.GetAsync("v2/HomePage/Services/"))
             {
                 var responseContent = await responseMessage.Content.ReadAsStringAsync();
-                if (responseMessage.StatusCode == HttpStatusCode.OK &&
-                    string.IsNullOrWhiteSpace(responseContent) == false)
+                if (responseMessage.StatusCode == HttpStatusCode.OK && string.IsNullOrWhiteSpace(responseContent) == false)
                 {
                     try
                     {
@@ -205,6 +211,17 @@ public class OmidbnkController(IHttpClientFactory factory)
 
         return result;
     }
+
+    private void AddDefaultHeader(ref HttpClient client)
+    {
+        client.DefaultRequestHeaders.Add("AppId", "1");
+        client.DefaultRequestHeaders.Add("DeviceTypeId", "1");
+        client.DefaultRequestHeaders.Add("DeviceId", "09128014549");
+        client.DefaultRequestHeaders.Add("AppLanguage", "fa");
+        client.DefaultRequestHeaders.Add("DeviceVersion", "1.7");
+        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json")); //ACCEPT header  
+    }
+    // => client.DefaultRequestHeaders.Add("AppId", "1");
 }
 
 // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);

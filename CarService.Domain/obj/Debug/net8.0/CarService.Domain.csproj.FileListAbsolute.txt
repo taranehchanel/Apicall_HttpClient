@@ -9,3 +9,4 @@ C:\Users\0080887945\RiderProjects\CarService\CarService.Domain\obj\Debug\net8.0\
 C:\Users\0080887945\RiderProjects\CarService\CarService.Domain\obj\Debug\net8.0\refint\CarService.Domain.dll
 C:\Users\0080887945\RiderProjects\CarService\CarService.Domain\obj\Debug\net8.0\CarService.Domain.pdb
 C:\Users\0080887945\RiderProjects\CarService\CarService.Domain\obj\Debug\net8.0\ref\CarService.Domain.dll
+C:\Users\0080887945\RiderProjects\CarService\CarService.Domain\obj\Debug\net8.0\CarService.Domain.sourcelink.json

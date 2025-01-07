@@ -15,3 +15,4 @@ C:\Users\0080887945\RiderProjects\CarService\CarService.Persistence\obj\Debug\ne
 C:\Users\0080887945\RiderProjects\CarService\CarService.Persistence\obj\Debug\net8.0\ref\CarService.Persistence.dll
 C:\Users\0080887945\RiderProjects\CarService\CarService.Persistence\bin\Debug\net8.0\CarService.Persistence.runtimeconfig.json
 C:\Users\0080887945\RiderProjects\CarService\CarService.Persistence\obj\Debug\net8.0\CarService.Persistence.genruntimeconfig.cache
+C:\Users\0080887945\RiderProjects\CarService\CarService.Persistence\obj\Debug\net8.0\CarService.Persistence.sourcelink.json

@@ -98,3 +98,4 @@ C:\Users\0080887945\RiderProjects\CarService\CarService.Api\obj\Debug\net8.0\ref
 C:\Users\0080887945\RiderProjects\CarService\CarService.Api\obj\Debug\net8.0\CarService.Api.pdb
 C:\Users\0080887945\RiderProjects\CarService\CarService.Api\obj\Debug\net8.0\CarService.Api.genruntimeconfig.cache
 C:\Users\0080887945\RiderProjects\CarService\CarService.Api\obj\Debug\net8.0\ref\CarService.Api.dll
+C:\Users\0080887945\RiderProjects\CarService\CarService.Api\obj\Debug\net8.0\CarService.Api.sourcelink.json
