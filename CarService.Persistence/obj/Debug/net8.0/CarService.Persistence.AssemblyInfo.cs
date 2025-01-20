@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarService.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d5890f1a4cb3ac4b5317d5057f909045dfefda7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d54c765ba261b5787118b07ee10934224f15b478")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarService.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarService.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
